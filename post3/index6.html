@@ -1,0 +1,42 @@
+<!doctype HTML>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <title>Moment of Inertia App Example</title>
+  </head>
+  <body>
+    <div id="app">
+      <form id="rectangle-form">
+        <h1>
+          Rectangle
+        </h1>
+        <label for="rectangleWidth">Width</label>
+        <input type="number" min=0 step=any
+               id="rectangleWidth" 
+               v-model="width"
+               v-on:change="printData"
+               />
+        <br/>
+        <label for="rectangleHeight">Height</label>
+        <input type="number" min=0 step=any
+               id="rectangleHeight"
+               v-model="height"
+               v-on:change="printData"
+               />
+      </form>
+      <div id="output">
+        <h2>Inputed width: {{ width }}</h2>
+        <h2>Inputed height: {{ height }}</h2>
+        <h2>Area: {{ area }}</h2>
+        <h2>X Moment: {{ xMoment }}</h2>
+        <h2>Y Moment: {{ yMoment }}</h2>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="sections3.js"></script>
+    <script src="main3.js"></script>
+  </body>
+</html>
+
